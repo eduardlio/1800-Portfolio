@@ -4,13 +4,40 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="styles/main.css")
+        link(rel="stylesheet", href="styles/user.css")
         title Document
     body
-        .root
-            nav.navbar
-                .nav-elem-wrap
-                    a(href="process.html") Project Process
-                .nav-elem-wrap
-                    a(href="port.html") Portfolio Process
-            .main-wrapper
-            .footer
+        nav.navbar
+            .nav-elem-wrap.nav-project.nav-link
+                a(href="process.html") Project Process
+            .nav-elem-wrap.nav-portfolio.nav-link
+                a(href="port.html") Portfolio Process
+        .main-wrapper
+            .progress-counter.clearfix
+                span.progress-previous-text previous
+                span.progress-current-text current
+                span.progress-next-text next
+            .item-wrapper
+                ul.item-list
+                    li.part.overview_part.active
+                        a(href="")
+                            .item-background-container
+                            h2.item-background-header Project Overview
+                    li.part.part_a
+                        a(href="")
+                            .item-background-container
+                            h2.item-background-header Part A
+                    li.part.part_b
+                        a(href="")
+                            .item-background-container
+                            h2.item-background-header Part B
+                    li.part.part_c 
+                        a(href="")
+                            .item-background-container
+                            h2.item-background-header Part C
+                    li.part.portfolio_part
+                        a(href="")
+                            .item-background-container
+                            h2.item-background-header Portfolio/Other
+        .footer

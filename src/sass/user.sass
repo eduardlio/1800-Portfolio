@@ -1,0 +1,62 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Prata|Rubik:300,400,700')
+
+// setting up some variables
+$phone-width: 770px;
+$desktop-width: 1024px;
+$desktop-media: "(min-width: $desktop-width)";
+$phone-media: "(min-width: $phone-width) and  (max-width: $desktop-width -1)";
+
+// setting mixins
+@mixin phone
+    @media #{$phone-media}
+        @content;
+
+@mixin standard
+    @media #{$desktop-media}
+        @content;
+
+
+
+.main-wrapper
+    width: 100%
+    height: 100%
+
+.navbar
+    position: absolute
+    top: 45px
+    left: 100px
+    z-index: 3
+    @phone
+        top: 22px
+        left: auto
+        right: 60px
+.progress-counter
+    position: absolute
+    top: 150px
+    left: 150px
+    font-family: 'Rubik'
+    span
+        float: left
+        margin: 20px
+
+.nav-link
+    position: absolute
+    top: 0
+    font-size: 14px
+    cursor: pointer
+.item-wrapper
+    top: 100px
+    left: 100px
+    width: calc(100% - 200px)
+    height: calc(100% - 200px)
+    position: absolute
+.item-list
+    height: 100%
+.part
+    height: 100%
+    width: 100%
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    text-align: center
