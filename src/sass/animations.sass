@@ -1,0 +1,46 @@
+.animated
+    animation-duration: 1s
+    animation-fill-mode: both
+@keyframes fadeInFromRight
+    from
+        opacity: 0
+        transform: translate3d(100%, 0, 0)
+    to
+        opactiy: 1
+        transform: none
+
+.fadeInFromRight
+    animation-name: fadeInFromRight
+
+@keyframes fadeOutToRight
+    from
+        opacity: 1
+        transform: none
+    to
+        opactiy: 0
+        transform: translate3d(100%, 0, 0)
+
+.fadeOutToRight
+    animation-name: fadeOutToRight
+
+@keyframes fadeInFromLeft
+    from
+        opacity: 0
+        transform: translate3d(-100%, 0, 0)
+    to
+        opactiy: 1
+        transform: none
+
+.fadeInFromLeft
+    animation-name: fadeInFromLeft
+
+@keyframes fadeOutToLeft
+    from
+        opacity: 1
+        transform: none
+    to
+        opactiy: 0
+        transform: translate3d(-100%, 0, 0)
+
+.fadeOutToLeft
+    animation-name: fadeOutToLeft

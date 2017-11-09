@@ -1,15 +1,19 @@
 var currentPage = 0;
 var pages = ['nav_about', 'overview_part', 'part_a', 'part_b', 'part_c', 'portfolio_part'];
 var content = ['about_content', 'overview_content', 'a_content', 'b_content', 'c_content', 'portfolio_content'];
+
 $(document).on("click", ".part", function(){
     console.log(this.id);
-    hideHome();
     showPage(pages.indexOf(this.id));
+});
+$(document).on("click", "#nav_about", function(){
+    showPage(0);
 })
 function hideHome(){
     $(".home-wrap").hide();
 }
 function showPage(num){
+    hideHome();
     for (var i = 0; i < content.length; i++) {
         if(i!=num){
             $("#"+content[i]).hide();        
