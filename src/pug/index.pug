@@ -8,38 +8,34 @@ html(lang="en")
         link(rel="stylesheet", href="styles/user.css")
         script(src="https://code.jquery.com/jquery-3.2.1.min.js")
         script(src="js/pagin.js")
+        script(src="js/content-pagin.js")
         title Edwwward Liao Portfolio
     body
         .whole-wrap
             .content
             .home-wrap
                 nav.navbar
-                    .nav-elem-wrap.nav-project.nav-link
-                        a Home
-                    .nav-elem-wrap.nav-portfolio.nav-link
+                    .nav-elem-wrap#nav-project.nav-link
+                        a(href="/") Home
+                    .nav-elem-wrap#nav-portfolio.nav-link
                         a About
                 .main-wrapper
                     .item-wrapper
                         ul.item-list
                             li.part#overview_part
-                                a(href="#")
-                                    .item-background-container
+                                a.item-background-container
                                     h2.item-background-header Project Overview
                             li.part#part_a
-                                a(href="#")
-                                    .item-background-container
+                                a.item-background-container
                                     h2.item-background-header Part A
                             li.part#part_b
-                                a(href="#")
-                                    .item-background-container
+                                a.item-background-container
                                     h2.item-background-header Part B
                             li.part#part_c 
-                                a(href="#")
-                                    .item-background-container
+                                a.item-background-container
                                     h2.item-background-header Part C
                             li.part#portfolio_part
-                                a(href="#")
-                                    .item-background-container
+                                a.item-background-container
                                     h2.item-background-header Portfolio/Other
 
                 .move

@@ -7,16 +7,8 @@ $(document).ready(function () {
         $('#' + parts[count]).fadeOut(150);
         count = num;
         $('#' + parts[count]).fadeIn(200).css('display', 'inline-flex');
-        if (num < count) {
-            // animate curren to go right
-            // animate next come in from left to right
-            // set curent = num
-        }
-        if (num > count) {
-            // animate current go screenLeft
-            // animate next come in form right to left
-            // set current = num
-        }
+        if (num < count) {        }
+        if (num > count) {        }
     }
     $(".move").on("click", "#move-next", function () {
         console.log("click");
