@@ -1,23 +1,18 @@
 $(document).ready(function () {
     var count = 0;
-    var parts = ['part-project', 'part_a', 'part_b', 'part_c', 'portfolio_part'];
+    var parts = ['overview_part', 'part_a', 'part_b', 'part_c', 'portfolio_part'];
 
     function hideAllBut(num) {
         console.log("hiding all but: " + num);
+        $('#' + parts[count]).hide();
+        count = num;
+        $('#' + parts[count]).fadeIn(100);
         if (num < count) {
-            console.log("sorting from num more than count");
-            $('.' + parts[count]).hide( );
-            count = num;
-            $('.' + parts[count]).css('display', 'inline-flex');
             // animate curren to go right
             // animate next come in from left to right
             // set curent = num
         }
         if (num > count) {
-            console.log("sorting from num more than count");
-            $('.' + parts[count]).hide( );
-            count = num;
-            $('.' + parts[count]).css('display', 'inline-flex');
             // animate current go screenLeft
             // animate next come in form right to left
             // set current = num
