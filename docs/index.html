@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="styles/main.css"/>
     <link rel="stylesheet" href="styles/user.css"/>
+    <link rel="stylesheet" href="styles/content-pagin.css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/pagin.js"></script>
     <script src="js/content-pagin.js"></script>
@@ -13,11 +14,74 @@
   </head>
   <body>
     <div class="whole-wrap">
-      <div class="content"></div>
+      <div class="content">
+        <div class="main" id="about_content">
+          <p>
+            I am a 3rd year UQ student studying my Bachelors in Information Technology. Although I focus on front-end development languages, I've completed courses in Databases (basic and relational),
+            algorithms &amp; data structures, and project management practices.
+          </p>
+          <p>
+            Over the course of this semester, I've had to jump through rings of fire in all four of the above. Whether or not itproved to be beneficial is yet to be known but I know one thing for certain: it wasn't healthy;</p>
+          <div class="pagin">
+            <div class="nextpage full-length">
+              <div class="next">next</div>
+              <div class="title">Project Overview</div>
+            </div>
+          </div>
+        </div>
+        <div class="main" id="overview_content">
+          <div class="pagin">
+            <div class="prevpage">
+              <div class="next">back</div>
+              <div class="title">About Me</div>
+            </div>
+            <div class="nextpage">
+              <div class="next">next</div>
+              <div class="title">Part A</div>
+            </div>
+          </div>
+        </div>
+        <div class="main" id="a_content">
+          <div class="pagin">
+            <div class="prevpage">
+              <div class="next">back</div>
+              <div class="title">Project Overview</div>
+            </div>
+            <div class="nextpage">
+              <div class="next">next</div>
+              <div class="title">Part B</div>
+            </div>
+          </div>
+        </div>
+        <div class="main" id="b_content">
+          <div class="pagin">
+            <div class="prevpage">
+              <div class="next">back</div>
+              <div class="title">Part A</div>
+            </div>
+            <div class="nextpage">
+              <div class="next">next</div>
+              <div class="title">Part C</div>
+            </div>
+          </div>
+        </div>
+        <div class="main" id="c_content">
+          <div class="pagin">
+            <div class="prevpage">
+              <div class="next">back</div>
+              <div class="title">Part B</div>
+            </div>
+            <div class="nextpage">
+              <div class="next">next</div>
+              <div class="title">Portfolio Overview</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="home-wrap">
         <nav class="navbar">
-          <div class="nav-elem-wrap nav-link" id="nav-project"><a href="/">Home</a></div>
-          <div class="nav-elem-wrap nav-link" id="nav-portfolio"><a>About</a></div>
+          <div class="nav-elem-wrap nav-link" id="nav_home"><a href="index.html">Home</a></div>
+          <div class="nav-elem-wrap nav-link" id="nav_about"><a>About</a></div>
         </nav>
         <div class="main-wrapper">
           <div class="item-wrapper">

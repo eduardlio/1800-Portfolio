@@ -6,18 +6,19 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(rel="stylesheet", href="styles/main.css")
         link(rel="stylesheet", href="styles/user.css")
+        link(rel="stylesheet", href="styles/content-pagin.css")
         script(src="https://code.jquery.com/jquery-3.2.1.min.js")
         script(src="js/pagin.js")
         script(src="js/content-pagin.js")
         title Edwwward Liao Portfolio
     body
         .whole-wrap
-            .content
+            include content.pug
             .home-wrap
                 nav.navbar
-                    .nav-elem-wrap#nav-project.nav-link
-                        a(href="/") Home
-                    .nav-elem-wrap#nav-portfolio.nav-link
+                    .nav-elem-wrap#nav_home.nav-link
+                        a(href="index.html") Home
+                    .nav-elem-wrap#nav_about.nav-link
                         a About
                 .main-wrapper
                     .item-wrapper
