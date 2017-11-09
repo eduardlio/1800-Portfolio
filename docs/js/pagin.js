@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     function hideAllBut(num) {
         console.log("hiding all but: " + num);
-        $('#' + parts[count]).hide();
+        $('#' + parts[count]).fadeOut(150);
         count = num;
         $('#' + parts[count]).fadeIn(200).css('display', 'inline-flex');
         if (num < count) {

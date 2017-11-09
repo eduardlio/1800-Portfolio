@@ -7,45 +7,48 @@
     <link rel="stylesheet" href="styles/main.css"/>
     <link rel="stylesheet" href="styles/user.css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/pagin.js"></script>
     <title>Edwwward Liao Portfolio</title>
   </head>
   <body>
     <div class="whole-wrap">
-      <nav class="navbar">
-        <div class="nav-elem-wrap nav-project nav-link"><a href="process.html">Project Process</a></div>
-        <div class="nav-elem-wrap nav-portfolio nav-link"><a href="port.html">Portfolio Process</a></div>
-      </nav>
-      <div class="main-wrapper">
-        <div class="item-wrapper">
-          <ul class="item-list">
-            <li class="part" id="overview_part"><a href="#">
-                <div class="item-background-container"></div>
-                <h2 class="item-background-header">Project Overview</h2></a></li>
-            <li class="part" id="part_a"><a href="#">
-                <div class="item-background-container"></div>
-                <h2 class="item-background-header">Part A</h2></a></li>
-            <li class="part" id="part_b"><a href="#">
-                <div class="item-background-container"></div>
-                <h2 class="item-background-header">Part B</h2></a></li>
-            <li class="part" id="part_c"> <a href="#">
-                <div class="item-background-container"></div>
-                <h2 class="item-background-header">Part C</h2></a></li>
-            <li class="part" id="portfolio_part"><a href="#">
-                <div class="item-background-container"></div>
-                <h2 class="item-background-header">Portfolio/Other</h2></a></li>
-          </ul>
+      <div class="content"></div>
+      <div class="home-wrap">
+        <nav class="navbar">
+          <div class="nav-elem-wrap nav-project nav-link"><a>Home</a></div>
+          <div class="nav-elem-wrap nav-portfolio nav-link"><a>About</a></div>
+        </nav>
+        <div class="main-wrapper">
+          <div class="item-wrapper">
+            <ul class="item-list">
+              <li class="part" id="overview_part"><a href="#">
+                  <div class="item-background-container"></div>
+                  <h2 class="item-background-header">Project Overview</h2></a></li>
+              <li class="part" id="part_a"><a href="#">
+                  <div class="item-background-container"></div>
+                  <h2 class="item-background-header">Part A</h2></a></li>
+              <li class="part" id="part_b"><a href="#">
+                  <div class="item-background-container"></div>
+                  <h2 class="item-background-header">Part B</h2></a></li>
+              <li class="part" id="part_c"> <a href="#">
+                  <div class="item-background-container"></div>
+                  <h2 class="item-background-header">Part C</h2></a></li>
+              <li class="part" id="portfolio_part"><a href="#">
+                  <div class="item-background-container"></div>
+                  <h2 class="item-background-header">Portfolio/Other</h2></a></li>
+            </ul>
+          </div>
         </div>
+        <div class="move">
+          <div class="move-op" id="move-prev"> 
+            <p class="move-prev-p">Prev</p>
+          </div>
+          <div class="move-op" id="move-next"> 
+            <p class="move-next-p">Next</p>
+          </div>
+        </div>
+        <div class="footer"></div>
       </div>
-      <div class="move">
-        <div class="move-op" id="move-prev"> 
-          <p class="move-prev-p">Prev</p>
-        </div>
-        <div class="move-op" id="move-next"> 
-          <p class="move-next-p">Next</p>
-        </div>
-      </div>
-      <div class="footer"></div>
     </div>
   </body>
 </html>

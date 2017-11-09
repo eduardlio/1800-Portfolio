@@ -2,27 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Prata|Rubik:300,400,700')
 
 // setting up some variables
-$phone-width: 770px;
-$desktop-width: 1024px;
-$desktop-media: "(min-width: $desktop-width)";
-$phone-media: "(min-width: $phone-width) and  (max-width: $desktop-width -1)";
 $cyan: rgba(223, 253, 255, 1);
 $dark-sky-blue: rgba(144, 190, 222, 1);
 $pink: rgba(254, 192, 203, 1);
 $aquamarine: rgba(104, 237, 198, 1);
 $elec-blue: rgba(144, 243, 255, 1);
-
-// setting mixins
-@mixin phone
-    @media #{$phone-media}
-        @content;
-
-@mixin standard
-    @media #{$desktop-media}
-        @content;
-
-
-
+.content
+    display: none
 .main-wrapper
     width: 100%
     height: 100%
@@ -53,6 +39,7 @@ $elec-blue: rgba(144, 243, 255, 1);
     background-color: blue
 
 .nav-link
+    cursor: pointer
     display: inline-block
     a
         margin-right: 10px
@@ -60,7 +47,7 @@ $elec-blue: rgba(144, 243, 255, 1);
         transition: .2s ease-in-out
         font-family: 'Rubik'
 .nav-link:hover
-    a
+    a   
         transition: .3s ease-in-out
         background-color: rgb(70, 70, 70)
         color: rgb(240, 240, 240)

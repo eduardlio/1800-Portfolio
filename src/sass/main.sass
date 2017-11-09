@@ -1,9 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Prata|Rubik:300,400,700')
 *
     margin: 0
     padding: 0
     border: 0
     font-size: 100%
     
+$phone-width: 770px;
+$desktop-width: 1024px;
+$desktop-media: "(min-width: $desktop-width)";
+$phone-media: "(min-width: $phone-width) and  (max-width: $desktop-width -1)";
+
+// setting mixins
+@mixin phone
+    @media #{$phone-media}
+        @content;
+
+@mixin standard
+    @media #{$desktop-media}
+        @content;
+
 li
     list-style-type: none
     list-style-image: none
