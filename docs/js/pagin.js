@@ -3,12 +3,12 @@ $(document).ready(function () {
     
     var count = 0;
     var parts = ['overview_part', 'part_a', 'part_b', 'part_c', 'portfolio_part'];
-    setInterval(upClick, 7000);
+    setInterval(upClick, 10000);
     function hideAllBut(num) {
         console.log("hiding all but: " + num);
-        $('#' + parts[count]).fadeOut(300);
+        $('#' + parts[count]).fadeOut(600);
         count = num;
-        $('#' + parts[count]).fadeIn(900).css('display', 'inline-flex');
+        $('#' + parts[count]).fadeIn(1000).css('display', 'inline-flex');
         if (num < count) {        }
         if (num > count) {        }
     }

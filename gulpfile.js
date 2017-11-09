@@ -15,7 +15,7 @@ gulp.task('css', function(){
 		.pipe(gulp.dest('docs/styles'))
 });
 gulp.task('html', function(){
-	gulp.src('src/pug/*.pug')
+	gulp.src('src/pug/index.pug')
 		.pipe(pug({
 			pretty: true
 		}))
