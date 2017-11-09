@@ -6,6 +6,11 @@ $phone-width: 770px;
 $desktop-width: 1024px;
 $desktop-media: "(min-width: $desktop-width)";
 $phone-media: "(min-width: $phone-width) and  (max-width: $desktop-width -1)";
+$cyan: rgba(223, 253, 255, 1);
+$dark-sky-blue: rgba(144, 190, 222, 1);
+$pink: rgba(254, 192, 203, 1);
+$aquamarine: rgba(104, 237, 198, 1);
+$elec-blue: rgba(144, 243, 255, 1);
 
 // setting mixins
 @mixin phone
@@ -40,11 +45,26 @@ $phone-media: "(min-width: $phone-width) and  (max-width: $desktop-width -1)";
         float: left
         margin: 20px
 
-.nav-link
+.nav-bar
     position: absolute
     top: 0
     font-size: 14px
     cursor: pointer
+    background-color: blue
+
+.nav-link
+    display: inline-block
+    a
+        margin-right: 10px
+        padding: 10px
+        transition: .2s ease-in-out
+        font-family: 'Rubik'
+.nav-link:hover
+    a
+        transition: .3s ease-in-out
+        background-color: rgb(40, 40, 40)
+        color: rgb(240, 240, 240)
+        
 .item-wrapper
     top: 100px
     left: 100px
@@ -58,19 +78,33 @@ $phone-media: "(min-width: $phone-width) and  (max-width: $desktop-width -1)";
 .part
     height: 100%
     width: 100%
-    display: inline-flex
+    display: none
     align-items: center
     justify-content: center
     text-align: center
+.part-project
+    background-color: $cyan
+    display: inline-flex
+.part_a
+    background-color: $dark-sky-blue
+.part_b
+    background-color: $pink
+.part_c
+    background-color: $aquamarine
+.portfolio_part
+    background-color: $elec-blue
+.item-background-header
+    font-size: 50px
+    font-family: 'Prata'
 
 .move
     width: 100%
     height: 100%
         
-.move-prev
+#move-prev
     left: 0
 
-.move-next
+#move-next
     right: 0
 .move-op
     position: absolute
@@ -84,3 +118,4 @@ $phone-media: "(min-width: $phone-width) and  (max-width: $desktop-width -1)";
         left: 50%
         top: 50%
         transform: translate(-50%, -50%)
+        font-family: 'Rubik'
