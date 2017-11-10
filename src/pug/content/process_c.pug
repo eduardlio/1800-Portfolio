@@ -1,3 +1,51 @@
-h1 Part C
+h1 Part C: Development
 p.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. In modi corporis enim numquam sunt! Doloribus dolores aliquid, inventore deleniti commodi accusamus iusto. A deserunt reprehenderit repellendus optio cum aspernatur. Quisquam!
+    This is when the real fun began. Designing the interface was one thing. Developing it was another. 
+    Initially, there was discussion as to whether or not we would use PHP. We decided not to, since 
+    there was the functionality of localStorage to be exploited in Javascript. I'll split this into a few 
+    different parts: The Interface; The Quiz and The JSON
+h2 The Interface
+p.
+    The idea of the interface was much like this portfolio: a one page app. Users wouldn't have 
+    to leave the website or have to reload anything because of Ajax. It actually took until 
+    the last week of the assessment for the Interface to even begin to be developed. Less about that, 
+    more about what I did.
+h3 My contribution
+p.
+    I coded up the initial interface which was described as "too silicon valley-y for kids". True, 
+    but still it was functional. To let the users see which vessels they could choose from, I wrote a 
+    vessel parser that would eventually output elements to the DOM. The same generally applied to the Convict selection as well as the Year selection. Most of these details were 
+    saved to localStorage.
+.image-div
+    img(src="imgs/vessel-code.png", alt="")
+    iframe(src='https://gfycat.com/ifr/PeskyWindingCod' frameborder='0' scrolling='no' allowfullscreen)
+p.
+    Beyond that, there was the quiz
+h2 The Quiz and JSON
+p.
+    I had never developed a quiz system before so this was a real step up for me. It involved a lot of 
+    debugging and generally, it wasn't as hard as it was tedious. The code was relatively modular; functions 
+    were separate from the data so there wasn't anything that was too strongly dependent on another. In retrospect, 
+    the code looks extremely simple. Had I sat down and just properly thought it out, it would've been much easier. 
+    It would also have been much easier if we had more javascript files as opposed to having one monolothic wall of text 
+    which depicted every piece of functionality in the application. That's beside the point. 
+
+p.
+    The quiz simply takes the current page and decides which questions to select from. There's a json file 
+    which contains all the questions grouped by which "location" (courthouse, jail, accommodation, etc) the user is in. 
+    The hardest part of this sections was knowing which localStorage item to choose from.
+
+h2 Git, Development Practices and other Crucial Tools(a course reflection)
+p.
+    One of the most important things about group development projects is version management. 
+    I remember doing DECO1400 and it was a tedious and trying process of deciding which version 
+    was current and which version had broken code and who did what and why and where. Git and SVN 
+    solves this. I taught my team the basics of Git, taking them through Sourcetree and Github desktop 
+    (1st place: git cli, 2nd: Sourcetree, 3rd: Github desktop). One of my team members was dealing with php 
+    and found it annoying to have to constantly upload it to the server and check it from there so I suggested xampp.
+    I was going to take it a step further and teach them Sass or Pug but that might be for next time. The point is, there are 
+    a lot of important tools that are being used by today's professionals that aren't being taught. 
+    Lifesaving tools like git, gulp, npm, etc. Having learned these has really changed the way I develop. 
+    I'm not saying that this course didn't teach me anything; it did. It taught me how to work and communicate more 
+    effectively in teams and how to share leadership. Although none of this can be explicitly taught in a 
+    web development course, some things can be. 

@@ -36,7 +36,8 @@ $soap: rgba(200, 204, 234, 1);
     span
         float: left
         margin: 20px
-
+li, a
+    font-family: 'Rubik'
 .nav-bar
     position: absolute
     top: 0
@@ -44,32 +45,24 @@ $soap: rgba(200, 204, 234, 1);
     cursor: pointer
     background-color: blue
 
-.nav-elem-wrap
+.nav-link
     cursor: pointer
     display: inline-block
-    .nav-link
-        -webkit-transition: all 0.2s ease-in
-        -moz-transition: all 0.2s ease-in
-        -o-transition: all 0.2s ease-in
-        transition: all 0.2s ease-in
-        position: relative
-        margin-right: 10px
-        padding: 10px
-        border-bottom: rgba(230, 230, 230, 0)
-        #nav_home
-            left: 100px
-        #nav_about
-            left: 0px
-        
-        font-family: 'Rubik'
-.nav-link:hover
-    -webkit-transition: all 0.2s ease-in
-    -moz-transition: all 0.2s ease-in
-    -o-transition: all 0.2s ease-in
-    transition: all 0.2s ease-in
-    border-bottom: rgba(230, 230, 230,1)
+    margin: 10px
+    margin-right: 10px
+    border-bottom: 1px solid rgba(40, 40, 40, 0)
+    transition: all .2s ease-in-out
+    padding-bottom: 5px
+    &:hover
+        transition: all .2s ease-in-out
+        padding-bottom: 2px
+        border-bottom: 1px solid rgba(40, 40, 40, 1)
+    #nav_home
+        left: 100px
+    #nav_about
+        left: 0px
     
-        
+    font-family: 'Rubik'
 .item-wrapper
     top: 100px
     left: 100px

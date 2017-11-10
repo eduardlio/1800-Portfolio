@@ -33,5 +33,6 @@ gulp.task('js', function(){
 gulp.task('watch', function(){
 	gulp.watch('src/sass/*.sass', ['css']);
 	gulp.watch('src/pug/*.pug', ['html']);
+	gulp.watch('src/pug/content/*.pug', ['html']);
 })
 gulp.task('default', ['html', 'css']);
