@@ -3,10 +3,16 @@
 
 // setting up some variables
 $cyan: rgba(223, 253, 255, 1);
-$dark-sky-blue: rgba(144, 190, 222, 1);
+$dark-sky-blue: rgba(169, 251, 215, 1);
 $pink: rgba(254, 192, 203, 1);
-$aquamarine: rgba(104, 237, 198, 1);
-$elec-blue: rgba(144, 243, 255, 1);
+$aquamarine: rgba(176, 198, 206, 1);
+$elec-blue: rgba(188, 193, 230, 1);
+
+$bubbles: rgba(228, 253, 255, 1);
+$paynes: rgba(84, 113, 129, 1);
+$bubble-gum: rgba(254, 203, 212, 1);
+$gray-blue: rgba(136, 157, 170, 1);
+$soap: rgba(200, 204, 234, 1);
 .content
     display: none
 .main-wrapper
@@ -38,19 +44,31 @@ $elec-blue: rgba(144, 243, 255, 1);
     cursor: pointer
     background-color: blue
 
-.nav-link
+.nav-elem-wrap
     cursor: pointer
     display: inline-block
-    a
+    .nav-link
+        -webkit-transition: all 0.2s ease-in
+        -moz-transition: all 0.2s ease-in
+        -o-transition: all 0.2s ease-in
+        transition: all 0.2s ease-in
+        position: relative
         margin-right: 10px
         padding: 10px
-        transition: .2s ease-in-out
+        border-bottom: rgba(230, 230, 230, 0)
+        #nav_home
+            left: 100px
+        #nav_about
+            left: 0px
+        
         font-family: 'Rubik'
 .nav-link:hover
-    a   
-        transition: .3s ease-in-out
-        background-color: rgb(70, 70, 70)
-        color: rgb(240, 240, 240)
+    -webkit-transition: all 0.2s ease-in
+    -moz-transition: all 0.2s ease-in
+    -o-transition: all 0.2s ease-in
+    transition: all 0.2s ease-in
+    border-bottom: rgba(230, 230, 230,1)
+    
         
 .item-wrapper
     top: 100px
@@ -66,22 +84,24 @@ $elec-blue: rgba(144, 243, 255, 1);
     height: 100%
     width: 100%
     display: none
-    align-items: center
-    justify-content: center
-    text-align: center
     a
+        letter-spacing: 0.12em 
         cursor: pointer
 #overview_part
-    background-color: $cyan
+    background-color: $bubbles
     display: inline-flex
 #part_a
-    background-color: $dark-sky-blue
+    background-color: $paynes
+    a, p
+        color: rgb(230, 230, 230)
 #part_b
-    background-color: $pink
+    background-color: $bubble-gum
 #part_c
-    background-color: $aquamarine
+    background-color: $gray-blue
+    a, p
+        color: #FFF
 #portfolio_part
-    background-color: $elec-blue
+    background-color: $soap
 .item-background-header
     font-size: 50px
     font-family: 'Prata'
@@ -108,3 +128,19 @@ $elec-blue: rgba(144, 243, 255, 1);
         top: 50%
         transform: translate(-50%, -50%)
         font-family: 'Rubik'
+.js-tilt
+    transform-style: preserve-3d
+    height: 100%
+    width: 100%
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    flex-direction: row
+    a
+        transform: translateZ(20px)
+    p 
+        transform: translateZ(10px)
+        font-size: 16px
+        position: absolute
+        top: 450px

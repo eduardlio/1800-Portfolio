@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="styles/main.css"/>
     <link rel="stylesheet" href="styles/user.css"/>
     <link rel="stylesheet" href="styles/content-pagin.css"/>
+    <link rel="stylesheet" href="styles/animations.css"/>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.color.min.js"></script>
     <script src="js/pagin.js"></script>
     <script src="js/content-pagin.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
     <title>Edwwward Liao Portfolio</title>
   </head>
   <body>
@@ -17,7 +20,7 @@
       <div class="content">
         <div class="back-to-home">
           <div class="navbar">
-            <div class="nav-elem-wrap nav-link"><a href="index.html">Home</a></div>
+            <div class="nav-elem-wrap"><a class="nav-link" href="index.html">Home</a></div>
           </div>
         </div>
         <div class="main" id="about_content">
@@ -124,22 +127,42 @@
       </div>
       <div class="home-wrap">
         <nav class="navbar">
-          <div class="nav-elem-wrap nav-link" id="nav_home"><a href="index.html">Home</a></div>
-          <div class="nav-elem-wrap nav-link" id="nav_about"><a>About</a></div>
+          <div class="nav-elem-wrap" id="nav_home"><a class="nav-link" href="index.html">Home</a></div>
+          <div class="nav-elem-wrap" id="nav_about"><a class="nav-link">About</a></div>
         </nav>
         <div class="main-wrapper">
           <div class="item-wrapper">
             <ul class="item-list">
-              <li class="part" id="overview_part"><a class="item-background-container">
-                  <h2 class="item-background-header">Project Overview</h2></a></li>
-              <li class="part" id="part_a"><a class="item-background-container">
-                  <h2 class="item-background-header">Part A</h2></a></li>
-              <li class="part" id="part_b"><a class="item-background-container">
-                  <h2 class="item-background-header">Part B</h2></a></li>
-              <li class="part" id="part_c"> <a class="item-background-container">
-                  <h2 class="item-background-header">Part C</h2></a></li>
-              <li class="part" id="portfolio_part"><a class="item-background-container">
-                  <h2 class="item-background-header">Portfolio/Other</h2></a></li>
+              <li class="part" id="overview_part">
+                <div class="js-tilt" data-tilt=""><a class="item-background-container">
+                    <h2 class="item-background-header">Project Overview</h2></a>
+                  <p>An Overview of the Convict Life Project</p>
+                </div>
+              </li>
+              <li class="part" id="part_a">
+                <div class="js-tilt" data-tilt=""><a class="item-background-container">
+                    <h2 class="item-background-header">Part A</h2></a>
+                  <p>Team Formation, Design Pitch and Proposal</p>
+                </div>
+              </li>
+              <li class="part" id="part_b">
+                <div class="js-tilt" data-tilt=""><a class="item-background-container">
+                    <h2 class="item-background-header">Part B</h2></a>
+                  <p>User Testing, MVP and Feedback</p>
+                </div>
+              </li>
+              <li class="part" id="part_c">
+                <div class="js-tilt" data-tilt=""><a class="item-background-container">
+                    <h2 class="item-background-header">Part C</h2></a>
+                  <p>Final Build and Exhibition</p>
+                </div>
+              </li>
+              <li class="part" id="portfolio_part">
+                <div class="js-tilt" data-tilt=""><a class="item-background-container">
+                    <h2 class="item-background-header">Portfolio/Other</h2></a>
+                  <p>Process of making this portfolio and other notes</p>
+                </div>
+              </li>
             </ul>
           </div>
         </div>

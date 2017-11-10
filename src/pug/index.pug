@@ -7,37 +7,50 @@ html(lang="en")
         link(rel="stylesheet", href="styles/main.css")
         link(rel="stylesheet", href="styles/user.css")
         link(rel="stylesheet", href="styles/content-pagin.css")
+        link(rel="stylesheet", href="styles/animations.css")
         script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+        script(src="js/jquery.color.min.js")
         script(src="js/pagin.js")
         script(src="js/content-pagin.js")
+        script(src="js/tilt.jquery.min.js")
         title Edwwward Liao Portfolio
     body
         .whole-wrap
             include content.pug
             .home-wrap
                 nav.navbar
-                    .nav-elem-wrap#nav_home.nav-link
-                        a(href="index.html") Home
-                    .nav-elem-wrap#nav_about.nav-link
-                        a About
+                    .nav-elem-wrap#nav_home
+                        a(href="index.html").nav-link Home
+                    .nav-elem-wrap#nav_about
+                        a.nav-link About
                 .main-wrapper
                     .item-wrapper
                         ul.item-list
                             li.part#overview_part
-                                a.item-background-container
-                                    h2.item-background-header Project Overview
+                                .js-tilt(data-tilt="")
+                                    a.item-background-container
+                                        h2.item-background-header Project Overview
+                                    p An Overview of the Convict Life Project
                             li.part#part_a
-                                a.item-background-container
-                                    h2.item-background-header Part A
+                                .js-tilt(data-tilt="")
+                                    a.item-background-container
+                                        h2.item-background-header Part A
+                                    p Team Formation, Design Pitch and Proposal
                             li.part#part_b
-                                a.item-background-container
-                                    h2.item-background-header Part B
-                            li.part#part_c 
-                                a.item-background-container
-                                    h2.item-background-header Part C
+                                .js-tilt(data-tilt="")
+                                    a.item-background-container
+                                        h2.item-background-header Part B
+                                    p User Testing, MVP and Feedback
+                            li.part#part_c
+                                .js-tilt(data-tilt="")
+                                    a.item-background-container
+                                        h2.item-background-header Part C
+                                    p Final Build and Exhibition
                             li.part#portfolio_part
-                                a.item-background-container
-                                    h2.item-background-header Portfolio/Other
+                                .js-tilt(data-tilt="")
+                                    a.item-background-container
+                                        h2.item-background-header Portfolio/Other
+                                    p Process of making this portfolio and other notes
 
                 .move
                     #move-prev.move-op 

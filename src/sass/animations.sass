@@ -4,10 +4,11 @@
 @keyframes fadeInFromRight
     from
         opacity: 0
-        transform: translate3d(100%, 0, 0)
+        transform: translate3d(0%, 0, 0)
     to
         opactiy: 1
-        transform: none
+        transform: translate3d(-100%, 0, 0)
+        
 
 .fadeInFromRight
     animation-name: fadeInFromRight
@@ -15,10 +16,11 @@
 @keyframes fadeOutToRight
     from
         opacity: 1
-        transform: none
+        transform: translate3d(-100%, 0, 0)
     to
         opactiy: 0
         transform: translate3d(100%, 0, 0)
+        display: none
 
 .fadeOutToRight
     animation-name: fadeOutToRight
@@ -29,7 +31,7 @@
         transform: translate3d(-100%, 0, 0)
     to
         opactiy: 1
-        transform: none
+        transform: translate3d(0%, 0, 0)
 
 .fadeInFromLeft
     animation-name: fadeInFromLeft
@@ -37,10 +39,11 @@
 @keyframes fadeOutToLeft
     from
         opacity: 1
-        transform: none
+        transform: translate3d(0, 0, 0)
     to
         opactiy: 0
         transform: translate3d(-100%, 0, 0)
+        display: none
 
 .fadeOutToLeft
     animation-name: fadeOutToLeft

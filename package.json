@@ -27,5 +27,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.1.2",
     "pug": "^2.0.0-beta11"
+  },
+  "dependencies": {
+    "tilt.js": "^1.2.1"
   }
 }

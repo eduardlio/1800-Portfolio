@@ -3,15 +3,38 @@ $(document).ready(function () {
     
     var count = 0;
     var parts = ['overview_part', 'part_a', 'part_b', 'part_c', 'portfolio_part'];
-    setInterval(upClick, 10000);
+    var colors = ['rgba(228, 253, 255, 1)', 'rgba(84, 113, 129, 1)', 'rgba(254, 203, 212, 1)', 'rgba(136, 157, 170, 1)', 'rgba(200, 204, 234, 1)'];
+    // setInterval(upClick, 3000);
     function hideAllBut(num) {
-        console.log("hiding all but: " + num);
-        $('#' + parts[count]).fadeOut(600);
+        console.log("hiding all but: " + num);        
+        // fadeIn(1000).css('display', 'inline-flex');
+        var thisNum = '#' + parts[count];
+        var nextNum = '#' + parts[num];
+        // $(thisNum).fadeOut(400);
+        $(nextNum).fadeIn(1000).css('display', 'inline-flex');
+        $(thisNum).hide();
+        // $(nextNum).removeClass('fadeInFromLeft fadeOutToRight fadeOutToLeft fadeInFromRight');
+        // $(thisNum).removeClass('fadeInFromLeft fadeOutToRight fadeOutToLeft fadeInFromRight');
+        // if (num < count) {
+        //     console.log('count larger');
+        //     $(thisNum).addClass('animated fadeOutToRight');
+        //     $(nextNum).addClass('animated fadeInFromLeft').css('display', 'inline-flex');
+        // }
+        // else if (num > count) {    
+        //     console.log('num larger');
+        //     $(thisNum).addClass('animated fadeOutToLeft');
+        //     $(nextNum).addClass('animated fadeInFromRight').css('display', 'inline-flex');
+        // }
         count = num;
-        $('#' + parts[count]).fadeIn(1000).css('display', 'inline-flex');
-        if (num < count) {        }
-        if (num > count) {        }
     }
+    function removeAnimationClasses(counted, num){
+        for (var i = 0; i < parts.length; i++) {
+            if(parts[i]!=counted && parts[i]!=num){
+                $('#'+parts[i]).removeClass('fadeInFromLeft fadeOutToRight fadeOutToLeft fadeInFromRight');
+            }
+        }
+    }
+
     $(".move").on("click", "#move-next", upClick);
 
     function upClick(){
