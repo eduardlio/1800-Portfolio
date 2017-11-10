@@ -25,10 +25,13 @@ $(document).ready(function () {
         $("#" + content[num]).fadeIn(300);
         $('.whole-wrap').css('background-color', colors[num]);
         // num!=2
-            $('.main').css('color', 'rgba(40, 40, 40, 1)');
-            // : $('.main').css('color', 'rgba(250, 250, 250, 1)');
+        $('.main').css('color', 'rgba(40, 40, 40, 1)');
+        // : $('.main').css('color', 'rgba(250, 250, 250, 1)');
         $('.content').fadeIn(400);
         currentPage = num;
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000);
     }
     $(document).on("click", ".prevpage", function () {
         console.log("prevclick");
