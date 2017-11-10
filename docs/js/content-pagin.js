@@ -16,13 +16,13 @@ $(document).ready(function () {
     }
     function showPage(num) {
         hideHome();
-        // for (var i = 0; i < content.length; i++) {
-        //     if (i != num) {
-        //         $("#" + content[i]).hide();
-        //     }
-        // }
-        changePage(content, num);
-        // $("#" + content[num]).show();
+        for (var i = 0; i < content.length; i++) {
+            if (i != num) {
+                $("#" + content[i]).hide();
+            }
+        }
+        // changePage(content, num);
+        $("#" + content[num]).show();
         $('.content').show();
         currentPage = num;
     }
