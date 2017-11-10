@@ -3,10 +3,10 @@ $(document).ready(function () {
     var currentPage = 0;
     var pages = ['nav_about', 'overview_part', 'part_a', 'part_b', 'part_c', 'portfolio_part'];
     var content = ['about_content', 'overview_content', 'a_content', 'b_content', 'c_content', 'portfolio_content'];
-
+    var colors = ['#DDC3D0', '#e4fdff', '#B0D2E5', '#FECCD5', '#899DAA', '#DEDEF4'];
     $(document).on("click", ".item-background-container", function () {
-        console.log(this.parentNode.id);
-        showPage(pages.indexOf(this.parentNode.id));
+        console.log(this.parentNode.parentNode.id);
+        showPage(pages.indexOf(this.parentNode.parentNode.id));
     });
     $(document).on("click", "#nav_about", function () {
         showPage(0);
@@ -18,12 +18,16 @@ $(document).ready(function () {
         hideHome();
         for (var i = 0; i < content.length; i++) {
             if (i != num) {
-                $("#" + content[i]).hide();
+                $("#" + content[i]).hide()
             }
         }
         // changePage(content, num);
-        $("#" + content[num]).show();
-        $('.content').show();
+        $("#" + content[num]).fadeIn(300);
+        $('.whole-wrap').css('background-color', colors[num]);
+        // num!=2
+            $('.main').css('color', 'rgba(40, 40, 40, 1)');
+            // : $('.main').css('color', 'rgba(250, 250, 250, 1)');
+        $('.content').fadeIn(400);
         currentPage = num;
     }
     $(document).on("click", ".prevpage", function () {
